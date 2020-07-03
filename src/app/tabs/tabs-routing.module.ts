@@ -8,27 +8,44 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {
-        path: 'tab2',
+        path: 'digital',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
-        path: 'tab3',
+        path: 'chat',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'account',
+        loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule)
+      },
+      {
+        path: 'browse',
+        loadChildren: () => import('../browse/browse.module').then( m => m.BrowsePageModule)
+      },
+      {
+        path: 'live',
+        loadChildren: () => import('../live/live.module').then( m => m.LivePageModule)
+      },
+      {
+        path: 'news',
+        loadChildren: () => import('../news/news.module').then( m => m.NewsPageModule)
+      },
+    
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];

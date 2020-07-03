@@ -1,0 +1,100 @@
+ion-content {
+    --padding-top: 5%;
+}
+@media (max-width: 500px) {
+    ion-content {
+        --padding-top: 10%;
+    }
+}
+
+@media (min-width: 700px) {
+    .title {
+        transform: scale(4) translate(45px, 45px);
+    }
+}
+
+.ongoingProgramCard {
+    ion-card-content {
+        * {
+            color: #ffffff;
+        }
+        padding: 0;
+
+        ion-label {
+            padding: 16px;
+        }
+
+        ion-label.title {
+            top: 20%;
+            position: absolute;
+
+            h1 {
+                max-width: 194px;
+                font-size: 50px;
+                font-weight: 900;
+                line-height: 36px;
+            }
+            p {
+                font-size: 16px;
+                font-weight: 200;
+            }
+        }
+
+        ion-label.subTitle {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            align-items: center;
+            ion-text:last-child {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    background: #06090e;
+    opacity: 86%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    // mix-blend-mode: hue;
+    opacity: 60%;
+}
+
+.exploreSection {
+    display: flex;
+    overflow-x: scroll;
+
+    ion-item {
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            span {
+                max-width: 60%;
+                max-height: 60%;
+            }
+
+            ion-label {
+                margin: 16px;
+            }
+        }
+    }
+
+    ion-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    ion-avatar {
+        width: 95px;
+        height: 95px;
+    }
+}

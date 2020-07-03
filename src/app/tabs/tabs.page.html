@@ -1,20 +1,54 @@
-<ion-tabs>
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <!-- menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
 
+    <!-- home tabs -->
+    <ion-tabs class="topTab">
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="browse">
+          <ion-label>Browse</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="live">
+          <ion-label>Live</ion-label>
+          <ion-badge color="primary">11</ion-badge>
+        </ion-tab-button>
+
+        <ion-tab-button tab="news">
+          <ion-label>News</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-tabs class="buttomTab">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab2">
-      <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+    <ion-tab-button tab="digital">
+      <ion-icon name="library"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3">
-      <ion-icon name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+    <ion-tab-button tab="chat">
+      <ion-icon name="chatbubbles"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="account">
+      <ion-icon name="person-circle"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button routerLink="/livestream">
+    <ion-icon name="radio"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

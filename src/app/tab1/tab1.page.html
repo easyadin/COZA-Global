@@ -1,17 +1,54 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list lines="none">
+        <ion-item detail="true">
+            <ion-label>Live Streaming</ion-label>
+        </ion-item>
+        <!-- retrieve the ongoing program -->
+        <ion-card class="ongoingProgramCard" button>
+            <ion-card-content>
+                <ion-img src="../../assets/tempImages/IMG_9111.jpg"></ion-img>
+                <div class="overlay"></div>
+                <ion-label class="title">
+                    <h1>7DG</h1>
+                    <p>started 5min ago</p>
+                </ion-label>
+                <ion-label class="subTitle">
+                    <ion-text slot="start">Pastor Fatoyinbo</ion-text>
+                    <ion-text slot="primary">
+                        <ion-icon name="stats-chart"></ion-icon> 5.5M Views
+                    </ion-text>
+                </ion-label>
+            </ion-card-content>
+        </ion-card>
+        <!-- explore section-->
+        <ion-item detail="true">
+            <ion-label>Explore</ion-label>
+        </ion-item>
+        <ion-list class="exploreSection">
+            <ion-item button lines="none" detail="false" class="expl">
+                <div>
+                    <ion-avatar>
+                        <img src="../../assets/tempImages/_MG_0893.JPG">
+                    </ion-avatar>
+                    <ion-label>
+                        <h3>Fatoyinbo Biodun</h3>
+                        <p>Senior Pastor</p>
+                    </ion-label>
+                </div>
+            </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+            <ion-item button lines="none" detail="false" class="expl">
+                <div>
+                    <ion-avatar>
+                        <img src="../../assets/tempImages/_MG_0839.jpg">
+                    </ion-avatar>
+                    <ion-label>
+                        <h3>Fatoyinbo Biodun</h3>
+                        <p>Senior Pastor</p>
+                    </ion-label>
+                </div>
+            </ion-item>
+        </ion-list>
+        <!-- sticky notification-->
+    </ion-list>
 </ion-content>

@@ -5,7 +5,16 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
+  },
+  {
+    path: 'livestream',
+    loadChildren: () => import('./livestream/livestream.module').then( m => m.LivestreamPageModule)
   }
+ 
 ];
 @NgModule({
   imports: [

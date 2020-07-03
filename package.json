@@ -1,7 +1,7 @@
 {
   "name": "coza",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Israel Ayokunnu",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -50,5 +50,5 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  "description": "An Ionic project"
+  "description": "COZA Global Mobile Application"
 }
