@@ -6,15 +6,57 @@
         </ion-buttons>
 
         <ion-buttons slot="primary">
-            <ion-button (click)="onCart()">
-                <ion-icon name="cart"></ion-icon>
-                <ion-badge>4</ion-badge>
+            <ion-button>
+                <ion-icon name="search"></ion-icon>
             </ion-button>
         </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Cozup!
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
+    <div class="onlineGroupList  ion-padding">
+        <ion-avatar>
+            <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-avatar>
+        <ion-avatar (click)="onGroup()">
+            <img src="../../assets/bookcovers/pb_author.png">
+        </ion-avatar>
+        <ion-avatar>
+            <img src="../../assets/bookcovers/md_author.png">
+        </ion-avatar>
+    </div>
 
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-badge>32</ion-badge>
+                    <ion-card-content>
+                        <ion-label>
+                            <h2>Tech Team</h2>
+                            <p>32 Participant</p>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col>
+                <ion-card>
+                    <ion-badge>32</ion-badge>
+                    <ion-card-content>
+                        <ion-label>
+                            <h2>PB</h2>
+                            <p>5M Participant</p>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

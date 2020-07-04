@@ -26,6 +26,9 @@ export class Tab3Page {
     this.visibilityService.setVisibility(false)
   }
 
+  onGroup(){
+    console.log("open group")
+  }
   ngOnDestroy() {
     // this.streamSubscription.unsubscribe();
   }
