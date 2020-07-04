@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'explore',
     loadChildren: () => import('./onexplore/onexplore.module').then( m => m.OnexplorePageModule)
+  },
+  {
+    path: 'stream-update',
+    loadChildren: () => import('./stream-update/stream-update.module').then( m => m.StreamUpdatePageModule)
+  },
+  {
+    path: 'newlivestream',
+    loadChildren: () => import('./newlivestream/newlivestream.module').then( m => m.NewlivestreamPageModule)
   }
  
 ];
