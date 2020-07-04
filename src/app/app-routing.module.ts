@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'livestream',
     loadChildren: () => import('./livestream/livestream.module').then( m => m.LivestreamPageModule)
+  },
+  {
+    path: 'explore',
+    loadChildren: () => import('./onexplore/onexplore.module').then( m => m.OnexplorePageModule)
   }
  
 ];
