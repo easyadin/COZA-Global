@@ -11,6 +11,17 @@ ion-header {
     ion-icon {
         font-size: 36px;
     }
+     --background:transparent;
+    --background: none;
+    background: none;
+    --ion-background: none;
+
+   ion-toolbar {
+    --background:transparent;
+    --background: none;
+    background: none;
+    --ion-background: none;
+   }
 }
 
 .buttomTab {

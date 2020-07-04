@@ -1,12 +1,12 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
+<ion-header [translucent]="false" class="ion-no-border">
+  <ion-toolbar [hidden]="visibility == false">
     <!-- menu button -->
     <ion-buttons slot="start">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
+      <ion-menu-button auto-hide="false" ></ion-menu-button>
     </ion-buttons>
 
     <!-- home tabs -->
-    <ion-tabs class="topTab" [hidden]="visibility == false">
+    <ion-tabs class="topTab" >
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="browse">
           <ion-label>Browse</ion-label>

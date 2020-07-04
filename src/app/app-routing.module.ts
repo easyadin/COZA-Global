@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'newlivestream',
     loadChildren: () => import('./newlivestream/newlivestream.module').then( m => m.NewlivestreamPageModule)
+  },
+  {
+    path: 'selectedbook',
+    loadChildren: () => import('./selectedbook/selectedbook.module').then( m => m.SelectedbookPageModule)
   }
  
 ];

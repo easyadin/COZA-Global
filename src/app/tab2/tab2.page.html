@@ -1,3 +1,101 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <!-- menu button -->
+        <ion-buttons slot="start">
+            <ion-menu-button auto-hide="false"></ion-menu-button>
+        </ion-buttons>
+
+        <ion-buttons slot="primary">
+            <ion-button (click)="onCart()">
+                <ion-icon name="cart"></ion-icon>
+                <ion-badge>4</ion-badge>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
 <ion-content [fullscreen]="true">
-    
+    <ion-header class="ion-no-border" class="contentHeader">
+        <ion-toolbar class="ion-padding">
+            <ion-label>
+                <p>Hey Sterling!</p>
+                <h1>Discover Books</h1>
+            </ion-label>
+        </ion-toolbar>
+
+
+        <!-- catergory tabs -->
+        <!-- Scrollable Segment -->
+        <ion-toolbar>
+            <ion-segment scrollable value="POPULAR" mode="md">
+                <ion-segment-button value="POPULAR">
+                    <ion-label>POPULAR</ion-label>
+                </ion-segment-button>
+
+                <ion-segment-button value="LATEST">
+                    <ion-label>LATEST</ion-label>
+                </ion-segment-button>
+
+                <ion-segment-button value="UPCOMING">
+                    <ion-label>UPCOMING</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-toolbar>
+    </ion-header>
+
+    <!-- Filter Segments -->
+    <div class="filterSegments">
+        <ion-card routerLink="/selectedbook">
+            <ion-card-content>
+                <img src="../../assets/bookcovers/whenfavour.png">
+                <ion-label>
+                    <h2>When Favour Find you</h2>
+                    <p>Fatoyinbo Biodun</p>
+                </ion-label>
+            </ion-card-content>
+        </ion-card>
+        <ion-card routerLink="/selectedbook">
+            <ion-card-content>
+                <img src="../../assets/bookcovers/littleFoxes.png">
+                <ion-label>
+                    <h2>Little Foxes</h2>
+                    <p>Fatoyinbo Biodun</p>
+                </ion-label>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <!-- ministry authors -->
+    <ion-toolbar class="authorsToolbar">
+        <ion-item detail="false" lines="none">
+            <ion-label>Authors</ion-label>
+        </ion-item>
+
+        <div class="authors">
+            <ion-item detail="false" lines="none" button routerLink="/selectedbook">
+                <ion-avatar slot="start">
+                    <img src="../../assets/bookcovers/pb_author.png">
+                </ion-avatar>
+                <ion-label>
+                    <h2>Fatoyinbo Biodun</h2>
+                    <p>
+                        <ion-icon name="book"></ion-icon> 16k books
+                    </p>
+                </ion-label>
+            </ion-item>
+
+            <ion-item detail="false" lines="none" button routerLink="/selectedbook">
+                <ion-avatar slot="start">
+                    <img src="../../assets/bookcovers/md_author.png">
+                </ion-avatar>
+                <ion-label>
+                    <h2>Modele Biodun</h2>
+                    <p>
+                        <ion-icon name="book"></ion-icon> 16k books
+                    </p>
+                </ion-label>
+            </ion-item>
+        </div>
+    </ion-toolbar>
 </ion-content>

@@ -1,14 +1,98 @@
 ion-content {
-    --padding-top: 5%;
-}
-@media (max-width: 500px) {
-    ion-content {
-        --padding-top: 17%;
+    --background: #f9f9f9;
+    .contentHeader {
+        background: transparent;
+        --background: #ffff;
+
+        ion-toolbar {
+            border-bottom-right-radius: 36px;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+
+            &:first-child {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+
+        ion-label {
+            h1 {
+                font-weight: 600;
+                font-size: 40px;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .filterSegments {
+        display: flex;
+        overflow-x: scroll;
+        ion-card {
+            background: transparent;
+            box-shadow: none;
+            max-width: 60%;
+            min-width: 60%;
+            ion-label {
+                h2 {
+                    color: #000000;
+                    font-weight: 500;
+                }
+            }
+            img {
+                //     box-shadow:
+                //     0 38px 203px rgba(0, 0, 0, 0.07)
+                //   ;
+                width: auto;
+                max-height: 200px;
+                height: 100%;
+                box-shadow: 0 0 6px 0px #000000ba;
+            }
+        }
+
+        @media (min-width: 500px) {
+            ion-card {
+                min-width: initial;
+            }
+        }
     }
 }
 
-@media (min-width: 700px) {
-    .title {
-        transform: scale(4) translate(45px, 45px);
+.authorsToolbar {
+    border-top-left-radius: 36px;
+
+    p {
+        display: flex;
+        align-items: center;
+        ion-icon {
+            margin-right: 6px;
+        }
+    }
+
+    ion-avatar {
+        border-radius: 12px;
+        --border-radius: 12px;
+
+        height: 65px;
+        width: 65px;
+        margin-bottom: 16px;
+    margin-top: 16px;
+    }
+
+    .authors {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+
+        ion-item {
+            min-width: 260px;
+            width: 100%;
+            --background: #f3f3f3;
+            border-radius: 12px;
+            margin-left: 16px;
+        }
     }
 }

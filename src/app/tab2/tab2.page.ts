@@ -29,6 +29,10 @@ export class Tab2Page implements OnDestroy{
     this.visibilityService.setVisibility(false)
   }
 
+
+  onCart(){
+    console.log("cart clicked")
+  }
   ngOnDestroy() {
     // this.streamSubscription.unsubscribe();
   }
