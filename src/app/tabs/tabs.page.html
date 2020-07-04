@@ -6,7 +6,7 @@
     </ion-buttons>
 
     <!-- home tabs -->
-    <ion-tabs class="topTab">
+    <ion-tabs class="topTab" [hidden]="visibility == false">
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="browse">
           <ion-label>Browse</ion-label>

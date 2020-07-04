@@ -1,0 +1,14 @@
+ion-content {
+    --padding-top: 5%;
+}
+@media (max-width: 500px) {
+    ion-content {
+        --padding-top: 17%;
+    }
+}
+
+@media (min-width: 700px) {
+    .title {
+        transform: scale(4) translate(45px, 45px);
+    }
+}

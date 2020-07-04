@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { VisibilityService } from '../services/visibility.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  constructor(private visibilityService: VisibilityService) { }
 
-  constructor() {}
+  // visibility;
+  // private streamSubscription: Subscription;
 
+  ngOnInit() {
+    // this.streamSubscription = this.visibilityService.visibilityChanged.subscribe(visibility => {
+    //   this.visibility = visibility
+    // })
+
+    // this.visibility = this.visibilityService.getvisibility();
+    this.visibilityService.setVisibility(false)
+  }
+
+  ionViewWillEnter(){
+    this.visibilityService.setVisibility(false)
+  }
+
+  ngOnDestroy() {
+    // this.streamSubscription.unsubscribe();
+  }
 }
