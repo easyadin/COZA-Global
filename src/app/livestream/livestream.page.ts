@@ -17,7 +17,7 @@ export class LivestreamPage implements OnInit {
   constructor(private streamService: StreamService,
     private gestureCtrl: GestureController,
     private screenOrientation: ScreenOrientation,
- ) { }
+  ) { }
 
 
   streamOuput;
@@ -35,7 +35,7 @@ export class LivestreamPage implements OnInit {
   isOrientation = 'landscape'
   // toggle giving options
   isActivated = false;
- 
+
   ngOnInit() {
     // double to toggle fullscreen
     const gesture = this.gestureCtrl.create({
@@ -55,7 +55,8 @@ export class LivestreamPage implements OnInit {
     // instantiate Video.js
     this.player = videojs(this.target.nativeElement,
       {
-        // fill: true,
+       
+        fluid: true,
         sources: [{
           src: this.streamOuput,
           type: "application/x-mpegURL"
@@ -101,7 +102,7 @@ export class LivestreamPage implements OnInit {
 
     if (Math.abs(now - this.lastOnStart) <= this.DOUBLE_CLICK_THRESHOLD) {
       // check fullscreen status
-       this.player.isFullscreen() ? (this.player.exitFullscreen(), this.player.exitFullWindow(),this.toPortrait()):(this.player.requestFullscreen(), this.toLandscape());
+      this.player.isFullscreen() ? (this.player.exitFullscreen(), this.player.exitFullWindow(), this.toPortrait()) : (this.player.requestFullscreen(), this.toLandscape());
       this.lastOnStart = 0;
     } else {
       this.lastOnStart = now;
