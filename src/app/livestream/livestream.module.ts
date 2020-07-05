@@ -10,14 +10,15 @@ import { LivestreamPage } from './livestream.page';
 
 import 'gl-ionic-background-video';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LivestreamPageRoutingModule
+    LivestreamPageRoutingModule,
   ],
   declarations: [LivestreamPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class LivestreamPageModule {}
+export class LivestreamPageModule { }
